@@ -25,9 +25,7 @@ class IncompleteLine:
         if chars:
             points *= 5
             points += CHUNK_SCORE_MAP[chars.pop(0)]
-            return IncompleteLine._calculate_autocomplete_points(
-                chars=chars, points=points
-            )
+            return IncompleteLine._calculate_autocomplete_points(chars=chars, points=points)
         return points
 
     def __repr__(self):
